@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+int prebrojiParneZnamenke(int);
+int ucitajBrojeveIPrebroji(int);
+
 int prebrojiParneZnamenke(int n)
 {
     int br = 0;
