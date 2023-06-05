@@ -2,7 +2,7 @@
 using namespace std;
 
 inline bool jeTroznamenkast(int);
-inline int kub(int);
+inline void kubiraj(int &);
 inline bool jeArmstrongov(int);
 
 inline bool jeTroznamenkast(int n)
@@ -15,9 +15,9 @@ inline bool jeTroznamenkast(int n)
     jednak zbroju kubova svojih znamenaka.
 */
 
-inline int kub(int b)
+inline void kubiraj(int &b)
 {
-    return b * b * b;
+    b = b * b * b;
 }
 
 inline bool jeArmstrongov(int n)
@@ -27,7 +27,8 @@ inline bool jeArmstrongov(int n)
     while (t > 0)
     {
         int z = t % 10; // Znamenka
-        s += kub(z);    // Kub znamenke
+        kubiraj(z);     // Kub znamenke
+        s += z;         // Dodaj kubiranu znamenku
         t /= 10;        // Ukloni znamenku
     }
     return s == n; // true / false
